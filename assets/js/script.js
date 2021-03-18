@@ -2,6 +2,7 @@ let currentDay = $("#currentDay");
 let textArea = $(".textarea");
 let listArray = [];
 var myVal;
+var myValue;
 
 updateCurrentTime();
 setInterval(updateCurrentTime, 1000);
@@ -39,10 +40,31 @@ $(textArea).each(function(number, item) {
 //     console.log(localStorage);
 //     // console.log(myVal);
 // })
+
+    console.log(listArray);
+    console.log(localStorage);
+
 $(textArea).each(function(index, element) {
     var textValue = $(element).val();
     listArray.push(textValue);
     localStorage.setItem(index, textValue);
     textArea = localStorage.getItem(listArray);
 })
-console.log(localStorage);
+
+// $(".saveBtn").click(function(index) {
+//     var textValue = $(textArea).val();
+//     listArray.push(textValue);
+//     localStorage.setItem(index, textValue);
+// })
+
+// $(textArea).each(function() {
+//     textArea.val(localStorage.getItem(listArray));
+// })
+
+// $(".saveBtn").click(function(index, element) {
+//     var textValue = $(element).val();
+//     listArray.push(textValue.text());
+//     localStorage.setItem(index, textValue);
+//     
+//     
+// });
