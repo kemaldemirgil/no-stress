@@ -34,20 +34,6 @@ textarea {
   font-size: 28px;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-/* 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-} */
-
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -56,7 +42,7 @@ textarea {
   padding-top: 1%;
   
 }
-.rightpad1 {
+.rightpad {
   padding-right: 1%;
 }
 
@@ -92,3 +78,18 @@ textarea {
   color: cadetblue;
   transition: all 0.3s ease-in-out;
 }
+
+/* .description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
+} */
