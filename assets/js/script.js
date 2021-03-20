@@ -19,8 +19,76 @@ $(textArea).each(function(number, item) {
     } else {
         $(item).attr("class", "present");
     }
-    // console.log(item);
 })
+
+
+let myNumArray = [];
+let myValArray = [];
+let theArray = [], myObj = {};
+let finalObject = {};
+var textAreaDataNumber;
+var textAreaValue;
+run();
+$(".saveBtn").click(function(event) {
+    textAreaDataNumber = $(this).parent().children(":nth-child(2)").data("number");
+    textAreaValue = $(this).parent().children(":nth-child(2)").val();
+    myObj = {
+        textAreaDataNumber: textAreaDataNumber,
+        textAreaValue: textAreaValue
+    }
+    theArray.push(myObj);
+    for (let val of theArray) {
+        if (finalObject[val.textAreaDataNumber]) {
+            finalObject[val.textAreaDataNumber] = finalObject[val.textAreaDataNumber]
+        }
+    }
+    console.log(finalObject);
+    localStorage.setItem("values", JSON.stringify(finalObject));
+    console.log(localStorage);
+    console.log(textAreaDataNumber);
+    console.log(textAreaValue);
+})
+
+function run() {
+    var myValues = JSON.parse(localStorage.getItem("values"));
+    if (myValues !== null) {
+        finalObject = myValues;
+    }
+    refreshList();
+}
+
+function refreshList() {
+
+}
+// console.log(localStorage);
+// localStorage.clear();
+
+    // myValArray.push(textAreaValue);
+    // localStorage.setItem("myValArray", JSON.stringify(myValArray));
+
+
+
+
+    // myObj [textAreaValue] = textAreaValue;
+    // myArray.push({myObj: myObj});
+
+    // var myStorage = [];
+    // myStorage.push(textAreaDataNumber);
+    // myStorage.push(textAreaValue);
+    // myObj.myDataId = myStorage;
+    // localStorage.setItem(myValue);
+
+    // console.log(theArray);
+    // console.log(myValArray);
+    // run()
+
+
+
+
+
+
+
+
 
 // $.each(textArea, function () {
 //     var myVal = localStorage.setItem($(textArea).val(), JSON.stringify());
@@ -41,15 +109,15 @@ $(textArea).each(function(number, item) {
 //     // console.log(myVal);
 // })
 
-    console.log(listArray);
-    console.log(localStorage);
+//     console.log(listArray);
+//     console.log(localStorage);
 
-$(textArea).each(function(index, element) {
-    var textValue = $(element).val();
-    listArray.push(textValue);
-    localStorage.setItem(index, textValue);
-    textArea = localStorage.getItem(listArray);
-})
+// $(textArea).each(function(index, element) {
+//     var textValue = $(element).val();
+//     listArray.push(textValue);
+//     localStorage.setItem(index, textValue);
+//     textArea = localStorage.getItem(listArray);
+// })
 
 // $(".saveBtn").click(function(index) {
 //     var textValue = $(textArea).val();
@@ -66,5 +134,7 @@ $(textArea).each(function(index, element) {
 //     listArray.push(textValue.text());
 //     localStorage.setItem(index, textValue);
 //     
-//     
+// 
 // });
+
+
