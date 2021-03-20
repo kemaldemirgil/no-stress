@@ -59,9 +59,9 @@ function run() {
 
 function refreshList() {
     for (var i = 0; i < finalObject.length; i++) {
-        var input = finalObject[i];
-        var myText = textArea[i];
-        myText.textContent = input;
+        if (finalObject.textAreaDataNumber === data.number) {
+            textArea.val() = finalObject.textAreaValue;
+        }
     }
 }
 // console.log(localStorage);
