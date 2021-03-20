@@ -58,7 +58,11 @@ function run() {
 }
 
 function refreshList() {
-
+    for (var i = 0; i < finalObject.length; i++) {
+        var input = finalObject[i];
+        var myText = textArea[i];
+        myText.textContent = input;
+    }
 }
 // console.log(localStorage);
 // localStorage.clear();
