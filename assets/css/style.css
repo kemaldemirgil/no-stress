@@ -1,32 +1,39 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1;
   background-image: url(../images/cork-board.png);
 }
 
 textarea {
-  background: transparent;
-  border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
   padding: 10px;
-  border: 0.5px solid black;
+  border: 0.5px solid #9b7253;
   border-right: none;
   box-shadow: 2px 2px 3px #816f57;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
+textarea:focus{
+  outline:none;
+}
+
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-image: url(../images/retina_wood.png);
+  color: #4d3e2e;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid #9b7253;
 }
-.container {
+
+.display-3 {
+  font-size: 82px;
+  text-shadow: 4px 4px 6px #aca090, 4px 4px 6px #302920 ;
+}
+
+.row {
   display:flex;
   margin-bottom: 10px;
 }
@@ -36,51 +43,58 @@ textarea {
 }
 
 .leadTime {
-  font-size: 28px;
+  font-size: 34px;
+  text-shadow: 2px 2px 2px #aca090;
 }
 
 .hour {
-  color: #000000;
+  color: #4d3e2e;
   border-top: 1px dashed #000000;
-  padding-left: 60px;
-  padding-top: 1%;
+  padding-left: -10px;
+  padding-top: 2%;
   font-size: 26px;
-  padding-right: 10px;
-  
-}
-.rightpad {
-  padding-right: 1%;
+  padding-right: 2%;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #aca090;
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: #cacaca;
+  color: #4d3e2e;
+}
+
+.past:focus {
+  background-color: #d4d3d3;
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #f3a19d;
+  color: #4d3e2e;
+}
+
+.present:focus {
+  background-color: #f7ada9;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #add8ad;
+  color: #4d3e2e;
+}
+
+.future:focus {
+  background-color: #b5ddb5;
 }
 
 .saveBtn {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #c0a47f;
-  color: white;
+  color: #f0e0cb;
   padding: 4%;
   border: none;
   box-shadow: 2px 2px 3px #816f57;
   border: 1px solid #816f57;
-}
-
-
-.saveBtn i {
-  scale: 1.5;
+  font-size: 35px;
 }
 
 .saveBtn:hover {
@@ -88,18 +102,3 @@ textarea {
   transition: all 0.3s ease-in-out;
   background-color: #af9572;
 }
-
-/* .description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
-} */

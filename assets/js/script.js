@@ -1,32 +1,16 @@
-///////////////////////////////////Init///////////////////////////////////
+///////////////////////////////////Init////////////////////////////////////
 let currentDay = $("#currentDay");
 let textArea = $(".textarea");
-var myObj = {};
-let textAreaDataNumber;
-let textAreaValue;
-var Tvalue;
-var Dnumber;
-var theObj = {
-    9 : null,
-    10 : null,
-    11 : null,
-    12 : null,
-    13 : null,
-    14 : null,
-    15 : null,
-    16 : null,
-    17 : null
-}
 
 ///////////////////////////////////Live-time///////////////////////////////
 updateCurrentTime();
 setInterval(updateCurrentTime, 1000);
 
 function updateCurrentTime() {
-    currentDay.text(moment().format('MMMM Do YYYY, h:mm:ss a')); // March 16th 2021, 10:42:35 am
+    currentDay.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 }
 
-///////////////////////////////////Color-code///////////////////////////////
+///////////////////////////////////Color-code//////////////////////////////
 $(textArea).each(function(number, item) {
     if (parseInt($(item).data("number")) < moment().hour()) {
         $(item).attr("class", "past");
@@ -37,25 +21,27 @@ $(textArea).each(function(number, item) {
     }
 })
 
-///////////////////////////////////Add-to-localStorage//////////////////////
+////////////////////////////////////Saving/////////////////////////////////
 $(".saveBtn").click(function() {
-    textAreaDataNumber = $(this).parent().children(":nth-child(2)").data("number");
-    textAreaValue = $(this).parent().children(":nth-child(2)").val();
-    var key = textAreaDataNumber;
-    var value = textAreaValue;
-    theObj[key] = value;
-    localStorage.setItem("values", JSON.stringify(theObj));
-})
+    var activity = $(this).siblings("textarea").val();
+    var hour = $(this).parent().attr("id");
+    localStorage.setItem(hour, activity);
+    // console.log(hour);
+    // console.log(activity);
+    // console.log(localStorage);
+});
 
-///////////////////////////////////Get-from-localStorage/////////////////////
+////////////////////////////////////Loading/////////////////////////////////
 function paste() {
-    myObj = JSON.parse(localStorage.getItem("values"));
-    Tvalue = Object.values(myObj);
-    $.each(textArea, function (i, val) {
-        var x = Tvalue[i];
-        $(this).val(x);
-        console.log(localStorage);
-    });
+    $("#hour-9 textarea").val(localStorage.getItem("hour-9"));
+    $("#hour-10 textarea").val(localStorage.getItem("hour-10"));
+    $("#hour-11 textarea").val(localStorage.getItem("hour-11"));
+    $("#hour-12 textarea").val(localStorage.getItem("hour-12"));
+    $("#hour-13 textarea").val(localStorage.getItem("hour-13"));
+    $("#hour-14 textarea").val(localStorage.getItem("hour-14"));
+    $("#hour-15 textarea").val(localStorage.getItem("hour-15"));
+    $("#hour-16 textarea").val(localStorage.getItem("hour-16"));
+    $("#hour-17 textarea").val(localStorage.getItem("hour-17"));
 }
 
 paste();
