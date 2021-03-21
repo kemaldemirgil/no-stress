@@ -1,9 +1,24 @@
+///////////////////////////////////Init///////////////////////////////////
 let currentDay = $("#currentDay");
 let textArea = $(".textarea");
-let listArray = [];
-var myVal;
-var myValue;
+var myObj = {};
+let textAreaDataNumber;
+let textAreaValue;
+var Tvalue;
+var Dnumber;
+var theObj = {
+    9 : null,
+    10 : null,
+    11 : null,
+    12 : null,
+    13 : null,
+    14 : null,
+    15 : null,
+    16 : null,
+    17 : null
+}
 
+///////////////////////////////////Live-time///////////////////////////////
 updateCurrentTime();
 setInterval(updateCurrentTime, 1000);
 
@@ -11,6 +26,7 @@ function updateCurrentTime() {
     currentDay.text(moment().format('MMMM Do YYYY, h:mm:ss a')); // March 16th 2021, 10:42:35 am
 }
 
+///////////////////////////////////Color-code///////////////////////////////
 $(textArea).each(function(number, item) {
     if (parseInt($(item).data("number")) < moment().hour()) {
         $(item).attr("class", "past");
@@ -21,124 +37,25 @@ $(textArea).each(function(number, item) {
     }
 })
 
-
-let myNumArray = [];
-let myValArray = [];
-let theArray = [], myObj = {};
-let finalObject = {};
-var textAreaDataNumber;
-var textAreaValue;
-run();
-$(".saveBtn").click(function(event) {
+///////////////////////////////////Add-to-localStorage//////////////////////
+$(".saveBtn").click(function() {
     textAreaDataNumber = $(this).parent().children(":nth-child(2)").data("number");
     textAreaValue = $(this).parent().children(":nth-child(2)").val();
-    myObj = {
-        textAreaDataNumber: textAreaDataNumber,
-        textAreaValue: textAreaValue
-    }
-    theArray.push(myObj);
-    for (let val of theArray) {
-        if (finalObject[val.textAreaDataNumber]) {
-            finalObject[val.textAreaDataNumber] = finalObject[val.textAreaDataNumber]
-        }
-    }
-    console.log(finalObject);
-    localStorage.setItem("values", JSON.stringify(finalObject));
-    console.log(localStorage);
-    console.log(textAreaDataNumber);
-    console.log(textAreaValue);
+    var key = textAreaDataNumber;
+    var value = textAreaValue;
+    theObj[key] = value;
+    localStorage.setItem("values", JSON.stringify(theObj));
 })
 
-function run() {
-    var myValues = JSON.parse(localStorage.getItem("values"));
-    if (myValues !== null) {
-        finalObject = myValues;
-    }
-    refreshList();
+///////////////////////////////////Get-from-localStorage/////////////////////
+function paste() {
+    myObj = JSON.parse(localStorage.getItem("values"));
+    Tvalue = Object.values(myObj);
+    $.each(textArea, function (i, val) {
+        var x = Tvalue[i];
+        $(this).val(x);
+        console.log(localStorage);
+    });
 }
 
-function refreshList() {
-    for (var i = 0; i < finalObject.length; i++) {
-        if (finalObject.textAreaDataNumber === data.number) {
-            textArea.val() = finalObject.textAreaValue;
-        }
-    }
-}
-// console.log(localStorage);
-// localStorage.clear();
-
-    // myValArray.push(textAreaValue);
-    // localStorage.setItem("myValArray", JSON.stringify(myValArray));
-
-
-
-
-    // myObj [textAreaValue] = textAreaValue;
-    // myArray.push({myObj: myObj});
-
-    // var myStorage = [];
-    // myStorage.push(textAreaDataNumber);
-    // myStorage.push(textAreaValue);
-    // myObj.myDataId = myStorage;
-    // localStorage.setItem(myValue);
-
-    // console.log(theArray);
-    // console.log(myValArray);
-    // run()
-
-
-
-
-
-
-
-
-
-// $.each(textArea, function () {
-//     var myVal = localStorage.setItem($(textArea).val(), JSON.stringify());
-//     listArray.push(myVal);
-// });
-// console.log(listArray);
-// console.log(localStorage);
-// $.each(textArea, function() {
-//     var myVal = $("textarea").val();
-//     console.log(myVal);
-// });
-
-// $(textArea).each(function(item) {
-//     myVal = localStorage.setItem("listArray", $(item).val());
-//     // console.log(myVal);
-//     // console.log(listArray);
-//     console.log(localStorage);
-//     // console.log(myVal);
-// })
-
-//     console.log(listArray);
-//     console.log(localStorage);
-
-// $(textArea).each(function(index, element) {
-//     var textValue = $(element).val();
-//     listArray.push(textValue);
-//     localStorage.setItem(index, textValue);
-//     textArea = localStorage.getItem(listArray);
-// })
-
-// $(".saveBtn").click(function(index) {
-//     var textValue = $(textArea).val();
-//     listArray.push(textValue);
-//     localStorage.setItem(index, textValue);
-// })
-
-// $(textArea).each(function() {
-//     textArea.val(localStorage.getItem(listArray));
-// })
-
-// $(".saveBtn").click(function(index, element) {
-//     var textValue = $(element).val();
-//     listArray.push(textValue.text());
-//     localStorage.setItem(index, textValue);
-//     
-// 
-// });
-
-
+paste();
