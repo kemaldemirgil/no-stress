@@ -33,6 +33,8 @@ $(".saveBtn").click(function() {
 
 ////////////////////////////////////Loading/////////////////////////////////
 function paste() {
+    $("#hour-7 textarea").val(localStorage.getItem("hour-7"));
+    $("#hour-8 textarea").val(localStorage.getItem("hour-8"));
     $("#hour-9 textarea").val(localStorage.getItem("hour-9"));
     $("#hour-10 textarea").val(localStorage.getItem("hour-10"));
     $("#hour-11 textarea").val(localStorage.getItem("hour-11"));
