@@ -16,7 +16,7 @@ textarea {
   border-bottom-left-radius: 15px;
 }
 
-textarea:focus{
+textarea:focus {
   outline:none;
 }
 
