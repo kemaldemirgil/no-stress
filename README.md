@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/kemaldemirgil/work-day-schedular?color=blue&label=Last%20Commit&logo=git)
 ![GitHub followers](https://img.shields.io/github/followers/kemaldemirgil?color=orange&label=Followers&logo=github)
 
-# Work-day Schedular
+# Work Day Schedular
 
 ### About:
 This is a daily work scheduler to organize and plan out the events during the day. The hours are between 7.00-17.00 which I considered as standard working hours for most people, the times could be adjusted and even be 24-hours if needed. I've used `jQuery` and `Bootstrap` for the first time to create this project, I've learned a lot from troubleshooting to get the `localStorage` working properly. 
