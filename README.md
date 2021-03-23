@@ -2,7 +2,6 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kemaldemirgil/work-day-schedular?color=red&label=HTML&logo=HTML5)
 ![GitHub](https://img.shields.io/github/license/kemaldemirgil/work-day-schedular?color=cyan&label=LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/kemaldemirgil/work-day-schedular?color=blue&label=Last%20Commit&logo=git)
-![GitHub followers](https://img.shields.io/github/followers/kemaldemirgil?color=orange&label=Followers&logo=github)
 
 # Work Day Schedular
 
