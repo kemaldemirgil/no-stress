@@ -18,7 +18,7 @@ This is a daily work scheduler to organize and plan out the events during the da
 >I've noticed different browsers act different on many situations, this could be the `localStorage` to even the layout of the page. Unfortunately, getting it working exactly the same for all the different browser types is something I have to work on. For now, I realized it's not fully responsive to all screen sizes even with using `Bootstrap`.
 
 ### Webpage:
-https://kemaldemirgil.github.io/work-day-schedular/
+https://kemaldemirgil.github.io/work-day-scheduler/
 ![work-day-schedular-ss](assets/images/ssWorkDayScheduler.png)
 
 ### License:
