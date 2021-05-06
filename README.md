@@ -1,7 +1,7 @@
-![GitHub language count](https://img.shields.io/github/languages/count/kemaldemirgil/work-day-schedular?color=purple&label=Languages)
-![GitHub top language](https://img.shields.io/github/languages/top/kemaldemirgil/work-day-schedular?color=red&label=HTML&logo=HTML5)
-![GitHub](https://img.shields.io/github/license/kemaldemirgil/work-day-schedular?color=cyan&label=LICENSE)
-![GitHub last commit](https://img.shields.io/github/last-commit/kemaldemirgil/work-day-schedular?color=blue&label=Last%20Commit&logo=git)
+![GitHub language count](https://img.shields.io/github/languages/count/kemaldemirgil/no-stress?color=purple&label=Languages)
+![GitHub top language](https://img.shields.io/github/languages/top/kemaldemirgil/no-stress?color=red&label=HTML&logo=HTML5)
+![GitHub](https://img.shields.io/github/license/kemaldemirgil/no-stress?color=cyan&label=LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/kemaldemirgil/no-stress?color=blue&label=Last%20Commit&logo=git)
 
 # Work Day Schedular
 
@@ -18,10 +18,10 @@ This is a daily work scheduler to organize and plan out the events during the da
 >I've noticed different browsers act different on many situations, this could be the `localStorage` to even the layout of the page. Unfortunately, getting it working exactly the same for all the different browser types is something I have to work on. For now, I realized it's not fully responsive to all screen sizes even with using `Bootstrap`.
 
 ### Webpage:
-https://kemaldemirgil.github.io/work-day-scheduler/
+https://kemaldemirgil.github.io/no-stress/
 ![work-day-schedular-ss](assets/images/ssWorkDayScheduler.png)
 
 ### License:
 
 Copyright © Kemal Demirgil. All rights reserved.
-Licensed under the [MIT](https://github.com/kemaldemirgil/work-day-schedular/blob/main/LICENSE) license.
+Licensed under the [MIT](https://github.com/kemaldemirgil/no-stress/blob/main/LICENSE) license.
